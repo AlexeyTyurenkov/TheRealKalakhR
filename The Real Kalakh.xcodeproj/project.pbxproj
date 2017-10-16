@@ -15,8 +15,20 @@
 		D9755E971F94CC6700E7864E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D9755E951F94CC6700E7864E /* Main.storyboard */; };
 		D9755E991F94CC6700E7864E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D9755E981F94CC6700E7864E /* Assets.xcassets */; };
 		D9755E9C1F94CC6700E7864E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D9755E9A1F94CC6700E7864E /* LaunchScreen.storyboard */; };
-		D9755EA71F94CC6700E7864E /* The_Real_KalakhTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9755EA61F94CC6700E7864E /* The_Real_KalakhTests.swift */; };
 		D9755EB21F94CC6700E7864E /* The_Real_KalakhUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9755EB11F94CC6700E7864E /* The_Real_KalakhUITests.swift */; };
+		D9755EC61F94D7A200E7864E /* GameModuleBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9755EC51F94D7A200E7864E /* GameModuleBuilder.swift */; };
+		D9755EC81F94D81E00E7864E /* SimpleGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9755EC71F94D81E00E7864E /* SimpleGameViewController.swift */; };
+		D9755ECA1F94D8E400E7864E /* OnePlayerModuleBuilderTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9755EC91F94D8E400E7864E /* OnePlayerModuleBuilderTest.swift */; };
+		D9755ECB1F94D94500E7864E /* GameModuleBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9755EC51F94D7A200E7864E /* GameModuleBuilder.swift */; };
+		D9755ECC1F94D99F00E7864E /* SimpleGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9755EC71F94D81E00E7864E /* SimpleGameViewController.swift */; };
+		D9755ECD1F94DA8200E7864E /* Game.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D9755EC41F94D77C00E7864E /* Game.storyboard */; };
+		D9755ECE1F94DA8400E7864E /* Game.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D9755EC41F94D77C00E7864E /* Game.storyboard */; };
+		D9755ED01F94DB0D00E7864E /* GameViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9755ECF1F94DB0D00E7864E /* GameViewProtocol.swift */; };
+		D9755ED11F94DB4000E7864E /* GameViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9755ECF1F94DB0D00E7864E /* GameViewProtocol.swift */; };
+		D9755ED31F94DB5A00E7864E /* GamePresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9755ED21F94DB5A00E7864E /* GamePresenterProtocol.swift */; };
+		D9755ED41F94DD6100E7864E /* GamePresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9755ED21F94DB5A00E7864E /* GamePresenterProtocol.swift */; };
+		D9755ED61F94E0EF00E7864E /* GamePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9755ED51F94E0EF00E7864E /* GamePresenter.swift */; };
+		D9755ED71F94FFEB00E7864E /* GamePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9755ED51F94E0EF00E7864E /* GamePresenter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,11 +60,17 @@
 		D9755E9B1F94CC6700E7864E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D9755E9D1F94CC6700E7864E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D9755EA21F94CC6700E7864E /* The Real KalakhTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "The Real KalakhTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		D9755EA61F94CC6700E7864E /* The_Real_KalakhTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = The_Real_KalakhTests.swift; sourceTree = "<group>"; };
 		D9755EA81F94CC6700E7864E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D9755EAD1F94CC6700E7864E /* The Real KalakhUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "The Real KalakhUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9755EB11F94CC6700E7864E /* The_Real_KalakhUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = The_Real_KalakhUITests.swift; sourceTree = "<group>"; };
 		D9755EB31F94CC6700E7864E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D9755EC41F94D77C00E7864E /* Game.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Game.storyboard; sourceTree = "<group>"; };
+		D9755EC51F94D7A200E7864E /* GameModuleBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameModuleBuilder.swift; sourceTree = "<group>"; };
+		D9755EC71F94D81E00E7864E /* SimpleGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleGameViewController.swift; sourceTree = "<group>"; };
+		D9755EC91F94D8E400E7864E /* OnePlayerModuleBuilderTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnePlayerModuleBuilderTest.swift; sourceTree = "<group>"; };
+		D9755ECF1F94DB0D00E7864E /* GameViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewProtocol.swift; sourceTree = "<group>"; };
+		D9755ED21F94DB5A00E7864E /* GamePresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamePresenterProtocol.swift; sourceTree = "<group>"; };
+		D9755ED51F94E0EF00E7864E /* GamePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamePresenter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +121,7 @@
 		D9755E8A1F94CC6600E7864E /* The Real Kalakh */ = {
 			isa = PBXGroup;
 			children = (
+				D9755EC31F94D77C00E7864E /* OnePlayerAction */,
 				D9755E8B1F94CC6600E7864E /* AppDelegate.swift */,
 				D9755E8D1F94CC6700E7864E /* GameScene.sks */,
 				D9755E8F1F94CC6700E7864E /* Actions.sks */,
@@ -119,8 +138,8 @@
 		D9755EA51F94CC6700E7864E /* The Real KalakhTests */ = {
 			isa = PBXGroup;
 			children = (
-				D9755EA61F94CC6700E7864E /* The_Real_KalakhTests.swift */,
 				D9755EA81F94CC6700E7864E /* Info.plist */,
+				D9755EC91F94D8E400E7864E /* OnePlayerModuleBuilderTest.swift */,
 			);
 			path = "The Real KalakhTests";
 			sourceTree = "<group>";
@@ -132,6 +151,19 @@
 				D9755EB31F94CC6700E7864E /* Info.plist */,
 			);
 			path = "The Real KalakhUITests";
+			sourceTree = "<group>";
+		};
+		D9755EC31F94D77C00E7864E /* OnePlayerAction */ = {
+			isa = PBXGroup;
+			children = (
+				D9755EC41F94D77C00E7864E /* Game.storyboard */,
+				D9755EC51F94D7A200E7864E /* GameModuleBuilder.swift */,
+				D9755EC71F94D81E00E7864E /* SimpleGameViewController.swift */,
+				D9755ECF1F94DB0D00E7864E /* GameViewProtocol.swift */,
+				D9755ED21F94DB5A00E7864E /* GamePresenterProtocol.swift */,
+				D9755ED51F94E0EF00E7864E /* GamePresenter.swift */,
+			);
+			path = OnePlayerAction;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -245,6 +277,7 @@
 				D9755E8E1F94CC6700E7864E /* GameScene.sks in Resources */,
 				D9755E991F94CC6700E7864E /* Assets.xcassets in Resources */,
 				D9755E9C1F94CC6700E7864E /* LaunchScreen.storyboard in Resources */,
+				D9755ECE1F94DA8400E7864E /* Game.storyboard in Resources */,
 				D9755E901F94CC6700E7864E /* Actions.sks in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -253,6 +286,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D9755ECD1F94DA8200E7864E /* Game.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -273,6 +307,11 @@
 				D9755E921F94CC6700E7864E /* GameScene.swift in Sources */,
 				D9755E941F94CC6700E7864E /* GameViewController.swift in Sources */,
 				D9755E8C1F94CC6600E7864E /* AppDelegate.swift in Sources */,
+				D9755ED31F94DB5A00E7864E /* GamePresenterProtocol.swift in Sources */,
+				D9755ED61F94E0EF00E7864E /* GamePresenter.swift in Sources */,
+				D9755ED01F94DB0D00E7864E /* GameViewProtocol.swift in Sources */,
+				D9755EC61F94D7A200E7864E /* GameModuleBuilder.swift in Sources */,
+				D9755EC81F94D81E00E7864E /* SimpleGameViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -280,7 +319,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D9755EA71F94CC6700E7864E /* The_Real_KalakhTests.swift in Sources */,
+				D9755ECA1F94D8E400E7864E /* OnePlayerModuleBuilderTest.swift in Sources */,
+				D9755ECC1F94D99F00E7864E /* SimpleGameViewController.swift in Sources */,
+				D9755ED71F94FFEB00E7864E /* GamePresenter.swift in Sources */,
+				D9755ED41F94DD6100E7864E /* GamePresenterProtocol.swift in Sources */,
+				D9755ECB1F94D94500E7864E /* GameModuleBuilder.swift in Sources */,
+				D9755ED11F94DB4000E7864E /* GameViewProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
