@@ -7,9 +7,11 @@
 //
 
 import XCTest
+import The_Real_Kalakh
 
 @testable import The_Real_Kalakh
 
+//protocol GameViewProtocol
 
 class OnePlayerModuleBuilderTest: XCTestCase {
     

@@ -14,7 +14,8 @@ class GameModuleBuilder
 {
     func build() -> UIViewController
     {
-        if let controller = UIStoryboard(name: "Game", bundle: nil).instantiateInitialViewController() {
+        let storyboard = UIStoryboard(name: "Game", bundle: nil)
+        if let controller = storyboard.instantiateInitialViewController() {
             if let controller = controller as? GameViewProtocol
             {
                 controller.presenter = GamePresenter()

@@ -19,16 +19,11 @@
 		D9755EC61F94D7A200E7864E /* GameModuleBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9755EC51F94D7A200E7864E /* GameModuleBuilder.swift */; };
 		D9755EC81F94D81E00E7864E /* SimpleGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9755EC71F94D81E00E7864E /* SimpleGameViewController.swift */; };
 		D9755ECA1F94D8E400E7864E /* OnePlayerModuleBuilderTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9755EC91F94D8E400E7864E /* OnePlayerModuleBuilderTest.swift */; };
-		D9755ECB1F94D94500E7864E /* GameModuleBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9755EC51F94D7A200E7864E /* GameModuleBuilder.swift */; };
-		D9755ECC1F94D99F00E7864E /* SimpleGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9755EC71F94D81E00E7864E /* SimpleGameViewController.swift */; };
 		D9755ECD1F94DA8200E7864E /* Game.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D9755EC41F94D77C00E7864E /* Game.storyboard */; };
 		D9755ECE1F94DA8400E7864E /* Game.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D9755EC41F94D77C00E7864E /* Game.storyboard */; };
 		D9755ED01F94DB0D00E7864E /* GameViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9755ECF1F94DB0D00E7864E /* GameViewProtocol.swift */; };
-		D9755ED11F94DB4000E7864E /* GameViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9755ECF1F94DB0D00E7864E /* GameViewProtocol.swift */; };
 		D9755ED31F94DB5A00E7864E /* GamePresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9755ED21F94DB5A00E7864E /* GamePresenterProtocol.swift */; };
-		D9755ED41F94DD6100E7864E /* GamePresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9755ED21F94DB5A00E7864E /* GamePresenterProtocol.swift */; };
 		D9755ED61F94E0EF00E7864E /* GamePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9755ED51F94E0EF00E7864E /* GamePresenter.swift */; };
-		D9755ED71F94FFEB00E7864E /* GamePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9755ED51F94E0EF00E7864E /* GamePresenter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -320,11 +315,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				D9755ECA1F94D8E400E7864E /* OnePlayerModuleBuilderTest.swift in Sources */,
-				D9755ECC1F94D99F00E7864E /* SimpleGameViewController.swift in Sources */,
-				D9755ED71F94FFEB00E7864E /* GamePresenter.swift in Sources */,
-				D9755ED41F94DD6100E7864E /* GamePresenterProtocol.swift in Sources */,
-				D9755ECB1F94D94500E7864E /* GameModuleBuilder.swift in Sources */,
-				D9755ED11F94DB4000E7864E /* GameViewProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

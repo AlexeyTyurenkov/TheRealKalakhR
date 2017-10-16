@@ -12,7 +12,7 @@
         <!--Simple Game View Controller-->
         <scene sceneID="cUJ-qG-tSK">
             <objects>
-                <viewController storyboardIdentifier="OnePlayerViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="yND-mD-RZ6" customClass="SimpleGameViewController" customModule="The_Real_Kalakh" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SimpleGameViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="yND-mD-RZ6" customClass="SimpleGameViewController" customModule="The_Real_Kalakh" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="nA7-fV-7VZ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
