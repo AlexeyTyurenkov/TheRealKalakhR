@@ -11,5 +11,10 @@ import Foundation
 
 class GamePresenter: GamePresenterProtocol
 {
-    var userInterface: GameViewProtocol! 
+    weak var userInterface: GameViewProtocol!
+    var router: GameRouterProtocol!
+    
+    func viewIsReady() {
+        
+    }
 }

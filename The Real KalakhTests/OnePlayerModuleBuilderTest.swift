@@ -31,8 +31,6 @@ class OnePlayerModuleBuilderTest: XCTestCase {
     
     func testCreateInitialController() {
         XCTAssertTrue((controller is GameViewProtocol), "Controller Should be Game View Protocol")
-        XCTAssertNotNil((controller as? GameViewProtocol)?.presenter, "Presenter Should be present")
-        XCTAssertNotNil((controller as? GameViewProtocol)?.presenter as? GamePresenterProtocol, "Presenter should conform the protocol")
         
     }
     
@@ -41,7 +39,8 @@ class OnePlayerModuleBuilderTest: XCTestCase {
         {
             if let presenter = controller.presenter
             {
-                
+                XCTAssertNotNil(presenter.userInterface, "User Interface for presenter should exist")
+                XCTAssertNotNil(presenter.router, "Router should exist")
             }
             else
             {
@@ -54,5 +53,9 @@ class OnePlayerModuleBuilderTest: XCTestCase {
         }
     }
     
+    func testRouter() {
+        guard let router = (controller as? GameViewProtocol)?.presenter?.router else { XCTFail("Controller didn't setup correctly "); return }
+        XCTAssertNotNil(router.presenter, "Presenter should be set up in router")
+    }
     
 }

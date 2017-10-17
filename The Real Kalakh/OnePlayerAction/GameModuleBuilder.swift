@@ -14,24 +14,34 @@ class GameModuleBuilder
 {
     func build() -> UIViewController
     {
+        let presenter = GamePresenter()
         let storyboard = UIStoryboard(name: "Game", bundle: nil)
         if let controller = storyboard.instantiateInitialViewController() {
-            if let controller = controller as? GameViewProtocol
-            {
-                controller.presenter = GamePresenter()
-                controller.presenter.userInterface = controller
-                
-            }
+            controller.injectPresenter(presenter)
+            presenter.router = GameRouter()
+            presenter.router.presenter = presenter
             return controller
         }
+        
+        
         return UIViewController()
     }
     
-    
+
     
 }
 
-
+extension UIViewController
+{
+    func injectPresenter(_ presenter:GamePresenterProtocol? = nil)
+    {
+        if let controller = self as? GameViewProtocol
+        {
+            controller.presenter = presenter ?? GamePresenter()
+            controller.presenter.userInterface = controller
+        }
+    }
+}
 
 
 

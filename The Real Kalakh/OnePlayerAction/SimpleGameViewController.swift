@@ -16,7 +16,7 @@ class SimpleGameViewController: UIViewController, GameViewProtocol {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        presenter.viewIsReady()
         // Do any additional setup after loading the view.
     }
 

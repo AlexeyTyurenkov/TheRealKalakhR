@@ -24,6 +24,11 @@
 		D9755ED01F94DB0D00E7864E /* GameViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9755ECF1F94DB0D00E7864E /* GameViewProtocol.swift */; };
 		D9755ED31F94DB5A00E7864E /* GamePresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9755ED21F94DB5A00E7864E /* GamePresenterProtocol.swift */; };
 		D9755ED61F94E0EF00E7864E /* GamePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9755ED51F94E0EF00E7864E /* GamePresenter.swift */; };
+		D9755EDB1F95C6E500E7864E /* SimpleGameViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9755EDA1F95C6E500E7864E /* SimpleGameViewControllerTests.swift */; };
+		D9755EDD1F95CA3400E7864E /* GamePresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9755EDC1F95CA3400E7864E /* GamePresenterTests.swift */; };
+		D9755EDF1F95CCE800E7864E /* GameRouterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9755EDE1F95CCE800E7864E /* GameRouterProtocol.swift */; };
+		D9755EE11F95CE0300E7864E /* GameRouterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9755EE01F95CE0300E7864E /* GameRouterTests.swift */; };
+		D9755EE31F95CE5A00E7864E /* GameRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9755EE21F95CE5A00E7864E /* GameRouter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +71,11 @@
 		D9755ECF1F94DB0D00E7864E /* GameViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewProtocol.swift; sourceTree = "<group>"; };
 		D9755ED21F94DB5A00E7864E /* GamePresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamePresenterProtocol.swift; sourceTree = "<group>"; };
 		D9755ED51F94E0EF00E7864E /* GamePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamePresenter.swift; sourceTree = "<group>"; };
+		D9755EDA1F95C6E500E7864E /* SimpleGameViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleGameViewControllerTests.swift; sourceTree = "<group>"; };
+		D9755EDC1F95CA3400E7864E /* GamePresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamePresenterTests.swift; sourceTree = "<group>"; };
+		D9755EDE1F95CCE800E7864E /* GameRouterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameRouterProtocol.swift; sourceTree = "<group>"; };
+		D9755EE01F95CE0300E7864E /* GameRouterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameRouterTests.swift; sourceTree = "<group>"; };
+		D9755EE21F95CE5A00E7864E /* GameRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameRouter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,6 +143,9 @@
 		D9755EA51F94CC6700E7864E /* The Real KalakhTests */ = {
 			isa = PBXGroup;
 			children = (
+				D9755EE01F95CE0300E7864E /* GameRouterTests.swift */,
+				D9755EDC1F95CA3400E7864E /* GamePresenterTests.swift */,
+				D9755EDA1F95C6E500E7864E /* SimpleGameViewControllerTests.swift */,
 				D9755EA81F94CC6700E7864E /* Info.plist */,
 				D9755EC91F94D8E400E7864E /* OnePlayerModuleBuilderTest.swift */,
 			);
@@ -157,6 +170,8 @@
 				D9755ECF1F94DB0D00E7864E /* GameViewProtocol.swift */,
 				D9755ED21F94DB5A00E7864E /* GamePresenterProtocol.swift */,
 				D9755ED51F94E0EF00E7864E /* GamePresenter.swift */,
+				D9755EDE1F95CCE800E7864E /* GameRouterProtocol.swift */,
+				D9755EE21F95CE5A00E7864E /* GameRouter.swift */,
 			);
 			path = OnePlayerAction;
 			sourceTree = "<group>";
@@ -299,8 +314,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D9755EE31F95CE5A00E7864E /* GameRouter.swift in Sources */,
 				D9755E921F94CC6700E7864E /* GameScene.swift in Sources */,
 				D9755E941F94CC6700E7864E /* GameViewController.swift in Sources */,
+				D9755EDF1F95CCE800E7864E /* GameRouterProtocol.swift in Sources */,
 				D9755E8C1F94CC6600E7864E /* AppDelegate.swift in Sources */,
 				D9755ED31F94DB5A00E7864E /* GamePresenterProtocol.swift in Sources */,
 				D9755ED61F94E0EF00E7864E /* GamePresenter.swift in Sources */,
@@ -315,6 +332,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				D9755ECA1F94D8E400E7864E /* OnePlayerModuleBuilderTest.swift in Sources */,
+				D9755EDD1F95CA3400E7864E /* GamePresenterTests.swift in Sources */,
+				D9755EE11F95CE0300E7864E /* GameRouterTests.swift in Sources */,
+				D9755EDB1F95C6E500E7864E /* SimpleGameViewControllerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

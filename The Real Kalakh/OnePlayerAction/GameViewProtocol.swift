@@ -11,5 +11,6 @@ import Foundation
 protocol GameViewProtocol: class
 {
     var presenter: GamePresenterProtocol! { get set }
+    
 }
 
