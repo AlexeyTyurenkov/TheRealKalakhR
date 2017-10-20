@@ -16,6 +16,8 @@ class GameInteractorTests: XCTestCase {
     
     
     let interactor = GameInteractor()
+    let presenter = MockClass.Presenter()
+    
     
     override func setUp() {
         super.setUp()
@@ -34,5 +36,29 @@ class GameInteractorTests: XCTestCase {
         presenter = nil
         XCTAssertNil(interactor.presenter, "Presenter should be weak link")
     }
+    
+    func testMoveFromCell() {
+        interactor.presenter = presenter
+        interactor.makeMove(index: 0)
+        XCTAssertNotNil(presenter.shownPosition, "Position should be shown")
+        XCTAssertEqual(presenter.shownPosition.at(0), 0, "Cell should be clear")
+        XCTAssertEqual(presenter.shownPosition.myKalakh, 1, "One seed in the kalah")
+        XCTAssertTrue(presenter.canPlay, "Can play")
+    }
+    
+    func testMoveAI() {
+        interactor.ai = SimpleAI()
+        let expectation = XCTestExpectation(description: "AI Move Expectation")
+        presenter.aiFinishBlock = {
+            expectation.fulfill()
+        }
+        interactor.presenter = presenter
+        interactor.makeAIMove()
+        XCTAssertTrue(interactor.inProgress, "AI should calculate")
+        wait(for: [expectation], timeout: TimeInterval(integerLiteral: 100))
+        XCTAssertFalse(interactor.inProgress, "AI should stop calculation")
+    }
+    
+    
     
 }

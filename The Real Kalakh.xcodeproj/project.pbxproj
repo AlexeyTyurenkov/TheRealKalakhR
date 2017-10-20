@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D969AC7C1F9A6BAA003515C1 /* AIProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D969AC7B1F9A6BAA003515C1 /* AIProtocol.swift */; };
+		D969AC7F1F9A6C37003515C1 /* SimpleAI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D969AC7E1F9A6C37003515C1 /* SimpleAI.swift */; };
+		D969AC811F9A6DC9003515C1 /* AITest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D969AC801F9A6DC9003515C1 /* AITest.swift */; };
 		D9755E8C1F94CC6600E7864E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9755E8B1F94CC6600E7864E /* AppDelegate.swift */; };
 		D9755E8E1F94CC6700E7864E /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = D9755E8D1F94CC6700E7864E /* GameScene.sks */; };
 		D9755E901F94CC6700E7864E /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = D9755E8F1F94CC6700E7864E /* Actions.sks */; };
@@ -56,6 +59,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D969AC7B1F9A6BAA003515C1 /* AIProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AIProtocol.swift; sourceTree = "<group>"; };
+		D969AC7E1F9A6C37003515C1 /* SimpleAI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleAI.swift; sourceTree = "<group>"; };
+		D969AC801F9A6DC9003515C1 /* AITest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AITest.swift; sourceTree = "<group>"; };
 		D9755E881F94CC6600E7864E /* The Real Kalakh.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "The Real Kalakh.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9755E8B1F94CC6600E7864E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D9755E8D1F94CC6700E7864E /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
@@ -117,6 +123,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D969AC7D1F9A6C1C003515C1 /* AI */ = {
+			isa = PBXGroup;
+			children = (
+				D969AC7E1F9A6C37003515C1 /* SimpleAI.swift */,
+			);
+			path = AI;
+			sourceTree = "<group>";
+		};
 		D9755E7F1F94CC6600E7864E = {
 			isa = PBXGroup;
 			children = (
@@ -157,6 +171,7 @@
 		D9755EA51F94CC6700E7864E /* The Real KalakhTests */ = {
 			isa = PBXGroup;
 			children = (
+				D969AC801F9A6DC9003515C1 /* AITest.swift */,
 				D9FF65F91F96A0F100B6291E /* PositionTests.swift */,
 				D9FF65F41F969ABB00B6291E /* GameInteractorTests.swift */,
 				D9755EE01F95CE0300E7864E /* GameRouterTests.swift */,
@@ -182,6 +197,7 @@
 		D9755EC31F94D77C00E7864E /* OnePlayerAction */ = {
 			isa = PBXGroup;
 			children = (
+				D969AC7D1F9A6C1C003515C1 /* AI */,
 				D9FF65F61F969B6F00B6291E /* Protocols */,
 				D9755EC41F94D77C00E7864E /* Game.storyboard */,
 				D9755EC51F94D7A200E7864E /* GameModuleBuilder.swift */,
@@ -201,6 +217,7 @@
 				D9755ED21F94DB5A00E7864E /* GamePresenterProtocol.swift */,
 				D9755EDE1F95CCE800E7864E /* GameRouterProtocol.swift */,
 				D9FF65EE1F96947C00B6291E /* GameInteractorProtocol.swift */,
+				D969AC7B1F9A6BAA003515C1 /* AIProtocol.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -344,8 +361,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				D9FF65F11F9695E800B6291E /* GameInteractor.swift in Sources */,
+				D969AC7C1F9A6BAA003515C1 /* AIProtocol.swift in Sources */,
 				D9755EE31F95CE5A00E7864E /* GameRouter.swift in Sources */,
 				D9FF65EF1F96947C00B6291E /* GameInteractorProtocol.swift in Sources */,
+				D969AC7F1F9A6C37003515C1 /* SimpleAI.swift in Sources */,
 				D9755E921F94CC6700E7864E /* GameScene.swift in Sources */,
 				D9755E941F94CC6700E7864E /* GameViewController.swift in Sources */,
 				D9755EDF1F95CCE800E7864E /* GameRouterProtocol.swift in Sources */,
@@ -366,6 +385,7 @@
 				D9755ECA1F94D8E400E7864E /* OnePlayerModuleBuilderTest.swift in Sources */,
 				D9FF65FC1F96A30300B6291E /* MockModels.swift in Sources */,
 				D9FF65FA1F96A0F100B6291E /* PositionTests.swift in Sources */,
+				D969AC811F9A6DC9003515C1 /* AITest.swift in Sources */,
 				D9755EDD1F95CA3400E7864E /* GamePresenterTests.swift in Sources */,
 				D9FF65F51F969ABB00B6291E /* GameInteractorTests.swift in Sources */,
 				D9755EE11F95CE0300E7864E /* GameRouterTests.swift in Sources */,
@@ -453,6 +473,7 @@
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_GENERATE_TEST_COVERAGE_FILES = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -561,6 +582,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = FEM5E9C5MW;
+				GCC_GENERATE_TEST_COVERAGE_FILES = YES;
 				INFOPLIST_FILE = "The Real KalakhTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ovt.The-Real-KalakhTests";
@@ -578,6 +600,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = FEM5E9C5MW;
+				GCC_GENERATE_TEST_COVERAGE_FILES = YES;
 				INFOPLIST_FILE = "The Real KalakhTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ovt.The-Real-KalakhTests";

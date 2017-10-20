@@ -17,11 +17,13 @@ class GamePresenterTests: XCTestCase {
     let controller = MockClass.GameView()
     let presenter = GamePresenter()
     let router = MockClass.Router()
+    let interactor = MockClass.Interactor()
     
     override func setUp() {
         super.setUp()
         presenter.userInterface = controller
         presenter.router = router
+        presenter.interactor = interactor
         // Put setup code here. This method is called before the invocation of each test method in the class.
     }
     
@@ -39,9 +41,42 @@ class GamePresenterTests: XCTestCase {
         XCTAssertNil(presenter.userInterface, "Presenter should release controller")
     }
     
+    func testStrongLinkToInteractor() {
+        var weakInteractor: GameInteractorProtocol? = MockClass.Interactor()
+        presenter.interactor = weakInteractor
+        weakInteractor = nil
+        XCTAssertNotNil(presenter.interactor, "Presenter should hold reference to interactor")
+    }
+    
     func testShowPosition() {
         presenter.userInterface.show(position: MockModels.Position())
         XCTAssertTrue(controller.isPositionShown, "Controller haven't displayed position")
+    }
+    
+    func testAskInteractor() {
+        presenter.viewIsReady()
+        XCTAssert(interactor.isPositionAsked, "Should ask for current position when view is ready")
+    }
+    
+    func testShowPositionFromInteractor() {
+        presenter.show(state: .Play, position: Position(), yourMove: false)
+        XCTAssertTrue(controller.isPositionShown, "Position should be shown")
+        XCTAssertTrue(controller.isGameContinous, "Controller is playable")
+        XCTAssertTrue(controller.canPlayerMove, "Player can play")
+    }
+    
+    func testMoveFromController() {
+        presenter.didTappedElement(index:1)
+        XCTAssertEqual(interactor.lastMove, 1, "Should pass move index to iterator")
+    }
+    
+    func testUpdateView() {
+        presenter.viewIsReadyForUpdate()
+        XCTAssertTrue(interactor.inProgress, "Should start calculations")
+    }
+    
+    func testShowError() {
+        presenter.show(error: .EmptyCell)
     }
     
 }

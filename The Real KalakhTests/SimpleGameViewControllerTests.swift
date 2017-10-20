@@ -38,5 +38,13 @@ class SimpleGameViewControllerTests: XCTestCase {
         controller.presenter.viewIsReady()
     }
 
+    //TO DO:
     
+    func testDidTapped() {
+        
+    }
+    
+    func testShowError() {
+        
+    }
 }

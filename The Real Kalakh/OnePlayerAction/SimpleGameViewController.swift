@@ -9,10 +9,13 @@
 import UIKit
 
 class SimpleGameViewController: UIViewController, GameViewProtocol {
-
+    func unlockForMove(_: Bool) {
+        
+    }
     
-    
-
+    func set(state: GameState) {
+        
+    }
     
     var presenter: GamePresenterProtocol!
     

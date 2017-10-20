@@ -21,6 +21,7 @@ class GameModuleBuilder
             presenter.router = GameRouter()
             presenter.router.presenter = presenter
             presenter.interactor = GameInteractor()
+            presenter.interactor.ai = SimpleAI()
             presenter.interactor.presenter = presenter
             return controller
         }

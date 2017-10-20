@@ -13,5 +13,7 @@ protocol GameViewProtocol: class
     var presenter: GamePresenterProtocol! { get set }
     
     func show(position: PositionProtocol)
+    func unlockForMove(_:Bool)
+    func set(state:GameState)
 }
 

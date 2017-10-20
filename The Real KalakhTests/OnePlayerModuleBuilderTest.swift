@@ -62,6 +62,9 @@ class OnePlayerModuleBuilderTest: XCTestCase {
     func testInteractor() {
         guard let interactor = (controller as? GameViewProtocol)?.presenter?.interactor else { XCTFail("Controller didn't setup correctly: Interactor missed "); return }
         XCTAssertNotNil(interactor.presenter, "Presenter should be set up in interactor")
+        XCTAssertNotNil(interactor.ai, "AI should be set")
     }
+    
+    
     
 }

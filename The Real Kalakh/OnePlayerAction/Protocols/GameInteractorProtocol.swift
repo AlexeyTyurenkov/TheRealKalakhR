@@ -8,7 +8,23 @@
 
 import Foundation
 
+enum GameState {
+    case Player1Win
+    case Player2Win
+    case Play
+    case Draw
+}
+
 protocol GameInteractorProtocol {
     
+    var ai: AIProtocol! { get set }
     var presenter: GamePresenterProtocol! {get set}
+    //Presenter OutPut
+    var inProgress: Bool { get }
+    
+    //Presenter Input
+    func getPosition()
+    func makeMove(index: Int)
+    func makeAIMove()
+    
 }
