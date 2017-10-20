@@ -1,5 +1,5 @@
 //
-//  SimpleGameViewControllerTests.swift
+//  GameInteractorTests.swift
 //  The Real KalakhTests
 //
 //  Created by Aleksey Tyurenkov on 10/17/17.
@@ -11,14 +11,14 @@ import The_Real_Kalakh
 
 @testable import The_Real_Kalakh
 
-class SimpleGameViewControllerTests: XCTestCase {
+
+class GameInteractorTests: XCTestCase {
     
-    let controller = SimpleGameViewController()
-    let presenter = MockClass.Presenter()
+    
+    let interactor = GameInteractor()
+    
     override func setUp() {
         super.setUp()
-        controller.presenter = presenter
-        presenter.userInterface = controller
         // Put setup code here. This method is called before the invocation of each test method in the class.
     }
     
@@ -27,16 +27,12 @@ class SimpleGameViewControllerTests: XCTestCase {
         super.tearDown()
     }
     
-    func testControllerLifeCycleDidLoad() {
-
-        controller.viewDidLoad()
-        XCTAssertTrue(presenter.visited, "View did load should call view is ready")
+    func testWeakness() {
+        var presenter: GamePresenterProtocol? = MockClass.Presenter()
+        interactor.presenter = presenter
+        XCTAssertNotNil(interactor.presenter, "Presenter should exist")
+        presenter = nil
+        XCTAssertNil(interactor.presenter, "Presenter should be weak link")
     }
-    
-    func testControllerShow()
-    {
-        controller.presenter.viewIsReady()
-    }
-
     
 }

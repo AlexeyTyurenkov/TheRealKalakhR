@@ -29,6 +29,13 @@
 		D9755EDF1F95CCE800E7864E /* GameRouterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9755EDE1F95CCE800E7864E /* GameRouterProtocol.swift */; };
 		D9755EE11F95CE0300E7864E /* GameRouterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9755EE01F95CE0300E7864E /* GameRouterTests.swift */; };
 		D9755EE31F95CE5A00E7864E /* GameRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9755EE21F95CE5A00E7864E /* GameRouter.swift */; };
+		D9FF65EF1F96947C00B6291E /* GameInteractorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9FF65EE1F96947C00B6291E /* GameInteractorProtocol.swift */; };
+		D9FF65F11F9695E800B6291E /* GameInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9FF65F01F9695E800B6291E /* GameInteractor.swift */; };
+		D9FF65F31F96990D00B6291E /* MockClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9FF65F21F96990D00B6291E /* MockClass.swift */; };
+		D9FF65F51F969ABB00B6291E /* GameInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9FF65F41F969ABB00B6291E /* GameInteractorTests.swift */; };
+		D9FF65F81F969BCF00B6291E /* Position.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9FF65F71F969BCF00B6291E /* Position.swift */; };
+		D9FF65FA1F96A0F100B6291E /* PositionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9FF65F91F96A0F100B6291E /* PositionTests.swift */; };
+		D9FF65FC1F96A30300B6291E /* MockModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9FF65FB1F96A30300B6291E /* MockModels.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,6 +83,13 @@
 		D9755EDE1F95CCE800E7864E /* GameRouterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameRouterProtocol.swift; sourceTree = "<group>"; };
 		D9755EE01F95CE0300E7864E /* GameRouterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameRouterTests.swift; sourceTree = "<group>"; };
 		D9755EE21F95CE5A00E7864E /* GameRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameRouter.swift; sourceTree = "<group>"; };
+		D9FF65EE1F96947C00B6291E /* GameInteractorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameInteractorProtocol.swift; sourceTree = "<group>"; };
+		D9FF65F01F9695E800B6291E /* GameInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameInteractor.swift; sourceTree = "<group>"; };
+		D9FF65F21F96990D00B6291E /* MockClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockClass.swift; sourceTree = "<group>"; };
+		D9FF65F41F969ABB00B6291E /* GameInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameInteractorTests.swift; sourceTree = "<group>"; };
+		D9FF65F71F969BCF00B6291E /* Position.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Position.swift; sourceTree = "<group>"; };
+		D9FF65F91F96A0F100B6291E /* PositionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PositionTests.swift; sourceTree = "<group>"; };
+		D9FF65FB1F96A30300B6291E /* MockModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockModels.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,11 +157,15 @@
 		D9755EA51F94CC6700E7864E /* The Real KalakhTests */ = {
 			isa = PBXGroup;
 			children = (
+				D9FF65F91F96A0F100B6291E /* PositionTests.swift */,
+				D9FF65F41F969ABB00B6291E /* GameInteractorTests.swift */,
 				D9755EE01F95CE0300E7864E /* GameRouterTests.swift */,
 				D9755EDC1F95CA3400E7864E /* GamePresenterTests.swift */,
 				D9755EDA1F95C6E500E7864E /* SimpleGameViewControllerTests.swift */,
 				D9755EA81F94CC6700E7864E /* Info.plist */,
 				D9755EC91F94D8E400E7864E /* OnePlayerModuleBuilderTest.swift */,
+				D9FF65F21F96990D00B6291E /* MockClass.swift */,
+				D9FF65FB1F96A30300B6291E /* MockModels.swift */,
 			);
 			path = "The Real KalakhTests";
 			sourceTree = "<group>";
@@ -164,16 +182,27 @@
 		D9755EC31F94D77C00E7864E /* OnePlayerAction */ = {
 			isa = PBXGroup;
 			children = (
+				D9FF65F61F969B6F00B6291E /* Protocols */,
 				D9755EC41F94D77C00E7864E /* Game.storyboard */,
 				D9755EC51F94D7A200E7864E /* GameModuleBuilder.swift */,
 				D9755EC71F94D81E00E7864E /* SimpleGameViewController.swift */,
-				D9755ECF1F94DB0D00E7864E /* GameViewProtocol.swift */,
-				D9755ED21F94DB5A00E7864E /* GamePresenterProtocol.swift */,
 				D9755ED51F94E0EF00E7864E /* GamePresenter.swift */,
-				D9755EDE1F95CCE800E7864E /* GameRouterProtocol.swift */,
 				D9755EE21F95CE5A00E7864E /* GameRouter.swift */,
+				D9FF65F01F9695E800B6291E /* GameInteractor.swift */,
+				D9FF65F71F969BCF00B6291E /* Position.swift */,
 			);
 			path = OnePlayerAction;
+			sourceTree = "<group>";
+		};
+		D9FF65F61F969B6F00B6291E /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				D9755ECF1F94DB0D00E7864E /* GameViewProtocol.swift */,
+				D9755ED21F94DB5A00E7864E /* GamePresenterProtocol.swift */,
+				D9755EDE1F95CCE800E7864E /* GameRouterProtocol.swift */,
+				D9FF65EE1F96947C00B6291E /* GameInteractorProtocol.swift */,
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -314,11 +343,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D9FF65F11F9695E800B6291E /* GameInteractor.swift in Sources */,
 				D9755EE31F95CE5A00E7864E /* GameRouter.swift in Sources */,
+				D9FF65EF1F96947C00B6291E /* GameInteractorProtocol.swift in Sources */,
 				D9755E921F94CC6700E7864E /* GameScene.swift in Sources */,
 				D9755E941F94CC6700E7864E /* GameViewController.swift in Sources */,
 				D9755EDF1F95CCE800E7864E /* GameRouterProtocol.swift in Sources */,
 				D9755E8C1F94CC6600E7864E /* AppDelegate.swift in Sources */,
+				D9FF65F81F969BCF00B6291E /* Position.swift in Sources */,
 				D9755ED31F94DB5A00E7864E /* GamePresenterProtocol.swift in Sources */,
 				D9755ED61F94E0EF00E7864E /* GamePresenter.swift in Sources */,
 				D9755ED01F94DB0D00E7864E /* GameViewProtocol.swift in Sources */,
@@ -332,8 +364,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				D9755ECA1F94D8E400E7864E /* OnePlayerModuleBuilderTest.swift in Sources */,
+				D9FF65FC1F96A30300B6291E /* MockModels.swift in Sources */,
+				D9FF65FA1F96A0F100B6291E /* PositionTests.swift in Sources */,
 				D9755EDD1F95CA3400E7864E /* GamePresenterTests.swift in Sources */,
+				D9FF65F51F969ABB00B6291E /* GameInteractorTests.swift in Sources */,
 				D9755EE11F95CE0300E7864E /* GameRouterTests.swift in Sources */,
+				D9FF65F31F96990D00B6291E /* MockClass.swift in Sources */,
 				D9755EDB1F95C6E500E7864E /* SimpleGameViewControllerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -20,11 +20,11 @@ class GameModuleBuilder
             controller.injectPresenter(presenter)
             presenter.router = GameRouter()
             presenter.router.presenter = presenter
+            presenter.interactor = GameInteractor()
+            presenter.interactor.presenter = presenter
             return controller
         }
-        
-        
-        return UIViewController()
+       return UIViewController()
     }
     
 

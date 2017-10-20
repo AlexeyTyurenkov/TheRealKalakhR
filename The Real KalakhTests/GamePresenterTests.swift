@@ -14,9 +14,9 @@ import The_Real_Kalakh
 
 class GamePresenterTests: XCTestCase {
     
-    let controller = MockGameView()
+    let controller = MockClass.GameView()
     let presenter = GamePresenter()
-    let router = MockRouter()
+    let router = MockClass.Router()
     
     override func setUp() {
         super.setUp()
@@ -30,19 +30,18 @@ class GamePresenterTests: XCTestCase {
         super.tearDown()
     }
     
-    func testExample() {
-        
+    func testWeakness() {
+        var weakController: GameViewProtocol? = MockClass.GameView()
+        weakController?.presenter = presenter
+        presenter.userInterface = weakController
+        XCTAssertNotNil(presenter.userInterface, "Presenter should hold reference to controller")
+        weakController = nil
+        XCTAssertNil(presenter.userInterface, "Presenter should release controller")
     }
     
-    class MockGameView: GameViewProtocol
-    {
-        var presenter: GamePresenterProtocol!
-        
-    }
-    
-    class MockRouter: GameRouterProtocol
-    {
-        var presenter: GamePresenterProtocol!
+    func testShowPosition() {
+        presenter.userInterface.show(position: MockModels.Position())
+        XCTAssertTrue(controller.isPositionShown, "Controller haven't displayed position")
     }
     
 }

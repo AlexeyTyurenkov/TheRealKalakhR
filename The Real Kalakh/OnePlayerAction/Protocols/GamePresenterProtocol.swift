@@ -11,6 +11,8 @@ import Foundation
 protocol GamePresenterProtocol: class {
     var userInterface: GameViewProtocol! {get set}
     var router: GameRouterProtocol! {get set}
-
+    var interactor: GameInteractorProtocol! {get set}
+    
+    
     func viewIsReady()
 }

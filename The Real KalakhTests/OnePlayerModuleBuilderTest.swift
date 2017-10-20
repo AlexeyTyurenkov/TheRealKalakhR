@@ -41,6 +41,7 @@ class OnePlayerModuleBuilderTest: XCTestCase {
             {
                 XCTAssertNotNil(presenter.userInterface, "User Interface for presenter should exist")
                 XCTAssertNotNil(presenter.router, "Router should exist")
+                XCTAssertNotNil(presenter.interactor, "Iterator should exists")
             }
             else
             {
@@ -56,6 +57,11 @@ class OnePlayerModuleBuilderTest: XCTestCase {
     func testRouter() {
         guard let router = (controller as? GameViewProtocol)?.presenter?.router else { XCTFail("Controller didn't setup correctly "); return }
         XCTAssertNotNil(router.presenter, "Presenter should be set up in router")
+    }
+    
+    func testInteractor() {
+        guard let interactor = (controller as? GameViewProtocol)?.presenter?.interactor else { XCTFail("Controller didn't setup correctly: Interactor missed "); return }
+        XCTAssertNotNil(interactor.presenter, "Presenter should be set up in interactor")
     }
     
 }

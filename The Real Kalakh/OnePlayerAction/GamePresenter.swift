@@ -13,6 +13,7 @@ class GamePresenter: GamePresenterProtocol
 {
     weak var userInterface: GameViewProtocol!
     var router: GameRouterProtocol!
+    var interactor: GameInteractorProtocol!
     
     func viewIsReady() {
         
