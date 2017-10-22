@@ -21,12 +21,13 @@ protocol PositionProtocol
     mutating func move(index:Int) throws -> Bool
     var myKalakh: Int {get}
     var enemyKalakh: Int { get }
+    var side: Int {get}
 }
 
 struct Position: PositionProtocol
 {
     private var holes:[Int]
-    private let side: Int
+    private(set) var side: Int
     private let total: Int
     init(oneside:Int = 6, seeds: Int = 6) {
         self.side = oneside
@@ -45,6 +46,7 @@ struct Position: PositionProtocol
     mutating func move(index: Int) throws -> Bool {
         guard index != side else { throw MoveError.MyKalakh}
         guard index != (2 * side + 1) else { throw MoveError.EnemyKalakh}
+        let ownerKalakh = index < side ? side : (2 * side + 1)
         var current = at(index)
         guard current != 0 else { throw MoveError.EmptyCell }
         let player = (0...5).contains(index)
@@ -63,7 +65,7 @@ struct Position: PositionProtocol
             if (current == 0) && (holes[i] == 1) && ( ( player ? 0...(side-1) : (side + 1)...(2 * side)).contains(i)) 
             {
                 let oppositeIndex = 2 * side - i
-                holes[side] = holes[side] + holes[oppositeIndex] + 1
+                holes[ownerKalakh] = holes[ownerKalakh] + holes[oppositeIndex] + 1
                 holes[oppositeIndex] = 0
                 holes[i] = 0
             }

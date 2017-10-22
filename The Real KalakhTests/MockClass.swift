@@ -102,10 +102,46 @@ class MockClass {
         var router: GameRouterProtocol!
         var userInterface: GameViewProtocol!
         var visited: Bool = false
+        
         func viewIsReady() {
             visited = true
         }
     }
     
+    class PositionPresenter: GamePresenterProtocol {
+        
+        var shownPosition: Position!
+        var canPlay: Bool = false
+        var aiFinishBlock: (()->())?
+        
+        func viewIsReadyForUpdate() {
+            
+        }
+        
+        func didTappedElement(index: Int) {
+            
+        }
+        
+        
+        func show(state: GameState, position: Position, yourMove: Bool) {
+            shownPosition = position
+            canPlay = yourMove
+            aiFinishBlock?()
+        }
+        
+        func show(error: MoveError) {
+            
+        }
+        
+        var interactor: GameInteractorProtocol!
+        var router: GameRouterProtocol!
+        var userInterface: GameViewProtocol!
+        var visited: Bool = false
+        
+        func viewIsReady() {
+            visited = true
+            userInterface.show(position: Position())
+        }
+    }
     
 }

@@ -5,6 +5,7 @@
     </device>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -16,9 +17,57 @@
                     <view key="view" contentMode="scaleToFill" id="nA7-fV-7VZ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="S5i-gh-mz1">
+                                <rect key="frame" x="0.0" y="20" width="375" height="162"/>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="O1i-qn-E7U">
+                                <rect key="frame" x="0.0" y="505" width="375" height="162"/>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Bo-MU-nJP">
+                                <rect key="frame" x="0.0" y="182" width="42" height="323"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sdf-YI-rPp">
+                                <rect key="frame" x="333" y="333.5" width="42" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="Ozk-eP-lsd">
+                                <rect key="frame" x="169" y="325" width="37" height="37"/>
+                                <color key="color" red="1" green="0.0" blue="0.25717592589999999" alpha="1" colorSpace="calibratedRGB"/>
+                            </activityIndicatorView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Sdf-YI-rPp" firstAttribute="trailing" secondItem="56D-3e-LsD" secondAttribute="trailing" id="4AL-xP-MqE"/>
+                            <constraint firstItem="56D-3e-LsD" firstAttribute="centerX" secondItem="Ozk-eP-lsd" secondAttribute="centerX" id="7e8-Jl-Egw"/>
+                            <constraint firstItem="56D-3e-LsD" firstAttribute="leading" secondItem="S5i-gh-mz1" secondAttribute="leading" id="C1y-Dh-WFY"/>
+                            <constraint firstItem="O1i-qn-E7U" firstAttribute="top" secondItem="8Bo-MU-nJP" secondAttribute="bottom" id="Dcv-JK-D0w"/>
+                            <constraint firstItem="S5i-gh-mz1" firstAttribute="top" secondItem="56D-3e-LsD" secondAttribute="top" id="NyY-Xs-jSG"/>
+                            <constraint firstItem="O1i-qn-E7U" firstAttribute="width" secondItem="56D-3e-LsD" secondAttribute="width" id="QIO-ZV-mcA"/>
+                            <constraint firstItem="O1i-qn-E7U" firstAttribute="leading" secondItem="56D-3e-LsD" secondAttribute="leading" id="S7z-6Q-Cx2"/>
+                            <constraint firstItem="Sdf-YI-rPp" firstAttribute="centerY" secondItem="8Bo-MU-nJP" secondAttribute="centerY" id="SAh-lF-kdW"/>
+                            <constraint firstItem="S5i-gh-mz1" firstAttribute="height" secondItem="56D-3e-LsD" secondAttribute="height" multiplier="1:4" id="X4h-Au-Cf6"/>
+                            <constraint firstItem="8Bo-MU-nJP" firstAttribute="top" secondItem="S5i-gh-mz1" secondAttribute="bottom" id="eJH-hO-sto"/>
+                            <constraint firstItem="O1i-qn-E7U" firstAttribute="height" secondItem="S5i-gh-mz1" secondAttribute="height" id="f6g-pz-UqD"/>
+                            <constraint firstItem="56D-3e-LsD" firstAttribute="bottom" secondItem="O1i-qn-E7U" secondAttribute="bottom" id="ilj-RT-njn"/>
+                            <constraint firstItem="56D-3e-LsD" firstAttribute="centerY" secondItem="Ozk-eP-lsd" secondAttribute="centerY" id="s4m-gI-aMg"/>
+                            <constraint firstItem="S5i-gh-mz1" firstAttribute="width" secondItem="56D-3e-LsD" secondAttribute="width" id="t9m-LZ-1xG"/>
+                            <constraint firstItem="56D-3e-LsD" firstAttribute="leading" secondItem="8Bo-MU-nJP" secondAttribute="leading" id="tTj-PU-KzR"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="56D-3e-LsD"/>
                     </view>
+                    <connections>
+                        <outlet property="activityIndicator" destination="Ozk-eP-lsd" id="w0d-It-t5p"/>
+                        <outlet property="enemyKalah" destination="8Bo-MU-nJP" id="aY3-jZ-TNS"/>
+                        <outlet property="enemyStack" destination="S5i-gh-mz1" id="iNR-s5-h3Z"/>
+                        <outlet property="myKalah" destination="Sdf-YI-rPp" id="5wi-V6-vvC"/>
+                        <outlet property="myStack" destination="O1i-qn-E7U" id="hEH-U8-R38"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nao-2k-VKc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

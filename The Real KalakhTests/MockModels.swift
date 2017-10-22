@@ -15,6 +15,8 @@ class MockModels
 {
     struct Position: PositionProtocol
     {
+        var side: Int = 6
+        
         func move(index: Int) throws -> Bool {
             return true
         }

@@ -13,7 +13,16 @@ class SimpleAI: AIProtocol {
     
     func solve(on position: PositionProtocol, success: (Int) -> ()) {
         Thread.sleep(forTimeInterval: 10)
-        success(0)
+        let side = position.side
+        var result = -1
+        repeat
+        {
+            result = Int(arc4random_uniform(UInt32(side)))
+            result = result + side + 1
+            
+        }
+        while position.at(result) == 0
+        success(result)
     }
     
     

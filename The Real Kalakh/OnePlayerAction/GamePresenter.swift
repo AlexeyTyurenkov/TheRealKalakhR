@@ -12,19 +12,16 @@ import Foundation
 class GamePresenter: GamePresenterProtocol
 {
     func viewIsReadyForUpdate() {
-        interactor.makeAIMove()
-        userInterface.unlockForMove(false)
-        
+        interactor.makeAIMove()        
     }
     
     func didTappedElement(index: Int) {
         interactor.makeMove(index: index)
-        userInterface.unlockForMove(false)
     }
     
     func show(state: GameState, position: Position, yourMove: Bool) {
         userInterface.show(position: position)
-        userInterface.unlockForMove(true)
+        userInterface.unlockForMove(yourMove)
         userInterface.set(state: state)
     }
     
